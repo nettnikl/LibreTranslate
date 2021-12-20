@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+        run: arm64 . --file Dockerfile --tag $IMAGE_NAME --platform linux/amd64,linux/arm64
 
       # Create an access token with `read:packages` and `write:packages` scopes
       # https://github.com/settings/tokens
