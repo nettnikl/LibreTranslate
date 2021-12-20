@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - nettnikl-patch-186
+      - test
     # Publish `v1.2.3` tags as releases.
     tags:
       - v*
