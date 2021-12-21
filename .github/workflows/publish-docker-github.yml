@@ -37,7 +37,7 @@ jobs:
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
   publish:
-    needs: test
+    #needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
