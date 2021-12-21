@@ -69,7 +69,7 @@ jobs:
             --build-arg VERSION=${VERSION} \
             --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
             --build-arg VCS_REF=${GITHUB_SHA::8} \
-            --tag $IMAGE_NAME,$IMAGE_ID \
+            --tag $IMAGE_ID:$VERSION \
             --file ./Dockerfile .
 
       - name: Set up QEMU
