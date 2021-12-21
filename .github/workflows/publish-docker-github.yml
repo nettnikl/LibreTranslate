@@ -79,9 +79,6 @@ jobs:
         id: buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Build image
-        run: docker buildx build --output "type=image,push=false" ${{ steps.prepare.outputs.buildx_args }}
-
       - name: Inspect builder
         run: |
           echo "Name:      ${{ steps.buildx.outputs.name }}"
@@ -89,6 +86,9 @@ jobs:
           echo "Status:    ${{ steps.buildx.outputs.status }}"
           echo "Flags:     ${{ steps.buildx.outputs.flags }}"
           echo "Platforms: ${{ steps.buildx.outputs.platforms }}"
+
+      - name: Build image
+        run: docker buildx build --output "type=image,push=false" ${{ steps.prepare.outputs.buildx_args }}
 
       # Create an access token with `read:packages` and `write:packages` scopes
       # https://github.com/settings/tokens
