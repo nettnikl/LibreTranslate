@@ -6,11 +6,12 @@ WORKDIR /app
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -qq \
-  && apt-get -qqq install --no-install-recommends -y libicu-dev pkg-config libxml2-dev libxslt-dev gcc g++ python3-pyqt5 \
+  && apt-get -qqq install --no-install-recommends -y libicu-dev pkg-config libxml2-dev libxslt-dev gcc g++ \
   && apt-get clean \
   && rm -rf /var/lib/apt
 
 RUN pip install --upgrade pip
+RUN pip install ctranslate2==2.10.1
 
 COPY . .
 
