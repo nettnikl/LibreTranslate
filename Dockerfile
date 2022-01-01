@@ -11,7 +11,6 @@ RUN apt-get update -qq \
   && rm -rf /var/lib/apt
 
 RUN pip install --upgrade pip
-RUN pip install PyQt5==5.15.6
 
 COPY . .
 
