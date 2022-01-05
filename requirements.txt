@@ -6,7 +6,7 @@ Flask-Limiter==1.4
 waitress==1.4.4
 expiringdict==1.2.1
 pyicu==2.7
-git+https://github.com/aboSamoor/pycld2@master
+git+https://github.com/aboSamoor/pycld2@d63195#egg=pycld2
 morfessor==2.0.6
 polyglot==16.7.4
 appdirs==1.4.4
